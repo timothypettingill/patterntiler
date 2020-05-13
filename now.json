@@ -1,0 +1,16 @@
+{
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.py"
+        }
+    ],
+    "functions": {
+        "api/index.py": {
+            "includeFiles": "templates/**/*.html"
+        },
+        "api/index.py": {
+            "includeFiles": "static/css/patterntiler.css"
+        }
+    }
+}

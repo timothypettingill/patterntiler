@@ -1,0 +1,16 @@
+{
+  "name": "patterntiler",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Timothy Pettingill <tpettingill@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "tailwindcss": "^1.4.6"
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="max-w-6xl px-6 mx-auto my-6">
+    <p class="block text-lg text-gray-700">
+        Create beautiful wallpapers by tiling your favorite patterns. You can find free patterns online at
+        <a href="https://www.toptal.com/designers/subtlepatterns/" class="text-purple-700 no-underline hover:underline"
+            target="_blank" rel="noopener noreferrer">https://www.subtlepatterns.com.
+        </a>
+    </p>
+    <div class="max-w-sm">
+        {% include "partials/index-form.html" %}
+    </div>
+</div>
+{% endblock %}

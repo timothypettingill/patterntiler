@@ -1,0 +1,21 @@
+{% import 'macros.html' as macros %}
+
+<form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+    <div class="mt-6 text-sm font-semibold text-gray-900">Step One - Choose your pattern</div>
+    {{ macros.render_field(form.image_file) }}
+    <div class="flex flex-no-wrap items-center mt-2 -mb-4">
+        <span class="flex-grow">
+            <hr /></span>
+        <span class="mx-4 text-sm font-semibold text-gray-500">OR</span>
+        <span class="flex-grow">
+            <hr /></span>
+    </div>
+    {{ macros.render_field(form.image_url) }}
+    <div class="mt-6 text-sm font-semibold text-gray-900">Step Two - Choose your wallpaper size</div>
+    {{ macros.render_field(form.width) }}
+    {{ macros.render_field(form.height) }}
+    <div class="block mt-4">
+        <button type="submit"
+            class="block px-4 py-2 text-sm font-semibold text-white bg-purple-800 rounded shadow hover:bg-purple-700">Submit</button>
+    </div>
+</form>

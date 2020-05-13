@@ -1,0 +1,39 @@
+{% macro field_label(field) %}
+    <label class="block text-sm font-semibold text-gray-700" for="{{ field.id }}">{{ field.label }}</label>
+{% endmacro %}
+
+{% macro field_description(field) %}
+    {% if field.description %}
+        <p class="block mt-1 text-sm text-gray-500">{{ field.description }}</p>
+    {% endif %}
+{% endmacro %}
+
+{% macro field_errors(field) %}
+    {% if field.errors %}
+        <ul class="block mt-1 list-none">
+            {% for error in field.errors %}
+                <li class="text-sm text-red-700">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+{% macro field_tag(field) %}
+    {% set _class = 'block mt-1 w-full form-input text-sm text-gray-700 placeholder-gray-500 ' + kwargs.pop('class', '') %}
+    {{ field(class=_class, **kwargs) }}
+{% endmacro %}
+
+{% macro render_field(field) %}
+    <div class="block mt-4">
+        {{ field_label(field) }}
+        {{ field_tag(field) }}
+        {{ field_description(field) }}
+        {{ field_errors(field) }}
+    </div>
+{% endmacro %}
+
+{% macro render_form(form) %}
+    {% for field in form %}
+        {{ render_field(field) }}
+    {% endfor %}
+{% endmacro %}

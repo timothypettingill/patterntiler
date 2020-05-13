@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="w-full h-full max-w-6xl px-6 mx-auto">
+    <div class="flex items-center justify-center w-full h-full">
+        <div class="text-center">
+            <p class="block text-6xl font-semibold text-gray-900">{{ status_code }}</p>
+            <p class="block mt-2 text-lg text-gray-700">{{ message }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
